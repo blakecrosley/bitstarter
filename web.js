@@ -7,7 +7,7 @@ var buf = new Buffer(fs.readFileSync('index.html'), 'utf-8');
 var app = express.createServer(express.logger());
 
 app.get('/', function(req, res) {
-    res.render('index.html');
+  response.send(buf.toString());
 });
 
 var port = process.env.PORT || 5000;
