@@ -1,10 +1,8 @@
 var express = require('express');
 
-var sys=require("sys"), fs=require("fs");
-var content=fs.readFileSync("index.html", "utf8");
-sys.puts(JSON.parse(content));
-
-buffer.toString('utf8')
+var fs = require("fs");
+var content = fs.readFileSync("./index.html", "utf8");
+Buffer(content).toString("utf8")
 
 var app = express.createServer(express.logger());
 
