@@ -1,5 +1,9 @@
 var express = require('express');
 
+var sys=require("sys"), fs=require("fs");
+var content=fs.readFileSync("index.html", "utf8");
+sys.puts(JSON.parse(content));
+
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
